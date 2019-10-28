@@ -10,7 +10,27 @@ namespace ProcessesAndThreads.CmdLine
     {
         private Process _runningCmdProcess;
 
-    public void RunSyncUtil(string toolPath, string toolArguments, string pWorkingDirectory = "")
+    public bool isToolAvailable(string toolPath, string toolArguments = "")
+    {
+            if (_runningCmdProcess == null)
+                _runningCmdProcess = new Process();
+
+            _runningCmdProcess.StartInfo.FileName = toolPath;
+            _runningCmdProcess.StartInfo.Arguments = toolArguments;
+            _runningCmdProcess.StartInfo.UseShellExecute = false;
+            _runningCmdProcess.StartInfo.RedirectStandardOutput = true;
+  
+            _runningCmdProcess.Start();
+            // Synchronously read the standard output of the spawned process. 
+            StreamReader reader = _runningCmdProcess.StandardOutput;
+            string output = reader.ReadToEnd();
+
+            _runningCmdProcess.WaitForExit();
+            _runningCmdProcess.Close();
+            return !output.Contains("is not recognized as an internal or external command");
+        }
+
+        public void RunSyncUtil(string toolPath, string toolArguments, string pWorkingDirectory = "")
     {
 
             if (_runningCmdProcess == null)

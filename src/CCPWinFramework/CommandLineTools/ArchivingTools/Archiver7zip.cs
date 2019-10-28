@@ -12,8 +12,8 @@ namespace CommandLineTools.ArchivingTools
         /// <param name="pArchiver7Zip"></param>
         public Archiver7zip(string pArchiver7Zip, IRunCmdUtil pRunnerZip)
         {
-            ArchiverFileName = pArchiver7Zip;
-            RunnerZip = pRunnerZip;               // Runner injection
+            ToolName = pArchiver7Zip;
+            CommandRunner = pRunnerZip;               // Runner injection
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace CommandLineTools.ArchivingTools
             sb.Append(pFolderPath);
 
 
-            RunnerZip.RunSyncUtil(ArchiverFileName, sb.ToString());
+            CommandRunner.RunSyncUtil(ToolName, sb.ToString());
 
         }
 

@@ -13,7 +13,10 @@
         /// ToolArguments">tool's arguments
         /// </summary>
 
- 
+        // test that tool is available
+
+        bool isToolAvailable(string toolPath, string toolArguments = "");
+  
         // Run The command line for the given tools (ToolPath) with the given arguments (ToolArguments)
         void RunSyncUtil(string toolPath, string toolArguments, string pWorkingDirectory = "" );
 

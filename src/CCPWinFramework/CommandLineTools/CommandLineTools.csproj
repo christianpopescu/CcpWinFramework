@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ArchivingTools\Archiver7zip.cs" />
     <Compile Include="ArchivingTools\ToolForArchive.cs" />
+    <Compile Include="CommandLineTool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

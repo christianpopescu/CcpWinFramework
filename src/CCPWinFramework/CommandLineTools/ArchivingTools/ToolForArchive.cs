@@ -5,15 +5,15 @@ namespace CommandLineTools.ArchivingTools
     /// <summary>
     /// Abstract class used to implement IoC pattern
     /// </summary>
-    public abstract class ToolForArchive
+    public abstract class ToolForArchive : CommandLineTool
     {
         /// <summary>
         /// The name of the archiver file. Ex : C:\Program Files (x86)\7-Zip\7z
         /// </summary>
-        protected string ArchiverFileName;
+ //       protected string ToolName;
 
         // -- The process that runs the archiver
-        protected IRunCmdUtil RunnerZip;
+ //       protected IRunCmdUtil CommandRunner;
 
         /// <summary>
         /// Archive folder and subfolders to a given archive.
