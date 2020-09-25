@@ -27,8 +27,9 @@ namespace CommandLineTools.ArchivingTools
         ///   Path's archive folder
         /// </param>
         /// 
-        /// 
-
+        ///
+        
+        
         public abstract void ArchiveFolderRecursive(string pFolderPath, string pArchivePath);
 
         /// <summary>
@@ -43,5 +44,8 @@ namespace CommandLineTools.ArchivingTools
 
         public abstract void ArchiveFile(string pFilePath, string pArchivePath);
 
+        protected ToolForArchive(string pToolName, IRunCmdUtil pCommandRunner) : base(pToolName, pCommandRunner)
+        {
+        }
     }
 }

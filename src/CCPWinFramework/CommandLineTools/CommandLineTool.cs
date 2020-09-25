@@ -14,6 +14,7 @@ namespace CommandLineTools
         // -- The process that runs the tool
         protected IRunCmdUtil CommandRunner;
 
+        protected CommandLineTool() {}
         protected CommandLineTool(string pToolName, IRunCmdUtil pCommandRunner)
         {
             ToolName = pToolName;

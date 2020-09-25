@@ -1,6 +1,7 @@
 ﻿
 
 using ProcessesAndThreads.CmdLine;
+using CommandLineTools.SourceControlTools.Git;
 
 namespace ConsoleSandbox.ProcessesAndThreads
 {
@@ -24,6 +25,12 @@ namespace ConsoleSandbox.ProcessesAndThreads
 
         }
 
+        public static string RunGit()
+        {
+            // d:\Program Files\Git\cmd\git.exe
+            GitRunner gr = GitRunner.CreateGitRunner(@"d:\Program Files\Git\cmd\git.exe");
+            return gr.DirectRunWithResult("status");
+        }
         //public static string RunArchiverTool()
         //{
 

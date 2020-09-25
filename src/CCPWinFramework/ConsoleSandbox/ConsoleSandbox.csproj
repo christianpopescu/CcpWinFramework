@@ -51,6 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommandLineTools\CommandLineTools.csproj">
+      <Project>{1521f047-6ad4-4f3f-bb8b-e6ffff31657b}</Project>
+      <Name>CommandLineTools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ProcessesAndThreads\ProcessesAndThreads.csproj">
       <Project>{e1db885e-76de-4ca0-bb3b-4d0589532e0e}</Project>
       <Name>ProcessesAndThreads</Name>

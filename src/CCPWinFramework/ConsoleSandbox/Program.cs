@@ -14,7 +14,8 @@ namespace ConsoleSandbox
     {
         static void Main(string[] args)
         {
-            var output = ProcessesAndThreads.ProcessesAndThreads.RunSomeApplicationWithConsole();
+            //var output = ProcessesAndThreads.ProcessesAndThreads.RunSomeApplicationWithConsole();
+            var output = ProcessesAndThreads.ProcessesAndThreads.RunGit();
             Console.Write(output);
             //TestSendMailMessage();
             Console.Write("Press Any Key! ");

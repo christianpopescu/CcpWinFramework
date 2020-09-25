@@ -10,10 +10,9 @@ namespace CommandLineTools.ArchivingTools
         /// Constructor
         /// </summary>
         /// <param name="pArchiver7Zip"></param>
-        public Archiver7zip(string pArchiver7Zip, IRunCmdUtil pRunnerZip)
+        public Archiver7zip(string pArchiver7Zip, IRunCmdUtil pRunnerZip) : base(pArchiver7Zip, pRunnerZip)
         {
-            ToolName = pArchiver7Zip;
-            CommandRunner = pRunnerZip;               // Runner injection
+                          // Runner injection
         }
 
         /// <summary>
