@@ -39,7 +39,7 @@ namespace ConsoleSandbox
                 EnableSsl = true,
                 UseDefaultCredentials = false,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
-                Credentials = new System.Net.NetworkCredential("ccp.adm@outlook.com", "Alex1997"),
+                Credentials = new System.Net.NetworkCredential("ccp.adm@outlook.com", "password"),
                 
             };
 
