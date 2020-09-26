@@ -20,9 +20,9 @@ namespace CommandLineTools.SourceControlTools.Git
             return gitRunner;
         }
 
-        public string DirectRunWithResult(string pCommandLineParameters)
+        public string DirectRunWithResult(GitWorkspace pGitWorkspace,string pCommandLineParameters)
         {
-            return Runner.RunSyncUtilGetOutput(GitPath, pCommandLineParameters);
+            return Runner.RunSyncUtilGetOutput(GitPath, pCommandLineParameters,pGitWorkspace.WorkspacePath);
         }
     }
 }

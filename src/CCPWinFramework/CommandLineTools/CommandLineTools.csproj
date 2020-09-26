@@ -46,6 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SourceControlTools\Git\GitException.cs" />
     <Compile Include="SourceControlTools\Git\GitRunner.cs" />
+    <Compile Include="SourceControlTools\Git\GitWorkspace.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProcessesAndThreads\ProcessesAndThreads.csproj">

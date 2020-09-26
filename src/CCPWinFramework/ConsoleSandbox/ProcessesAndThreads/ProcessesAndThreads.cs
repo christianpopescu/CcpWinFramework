@@ -29,7 +29,8 @@ namespace ConsoleSandbox.ProcessesAndThreads
         {
             // d:\Program Files\Git\cmd\git.exe
             GitRunner gr = GitRunner.CreateGitRunner(@"d:\Program Files\Git\cmd\git.exe");
-            return gr.DirectRunWithResult("status");
+            GitWorkspace gw = GitWorkspace.GetGitWorkspace(@"E:\ccp_vhdd_main\workspace\DevOpsHelperTools");
+            return gr.DirectRunWithResult(gw,"status");
         }
         //public static string RunArchiverTool()
         //{
