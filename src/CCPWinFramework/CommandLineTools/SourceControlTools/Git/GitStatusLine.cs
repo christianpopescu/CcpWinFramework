@@ -10,6 +10,7 @@ namespace CommandLineTools.SourceControlTools.Git
     /// <summary>
     ///  Represents one line in the answer of "get status --porcelain=1" request
     ///
+    /// Throws GitException if Status line invalid
     ///  For details see: https://git-scm.com/docs/git-status
     ///  </summary>
     public class GitStatusLine
@@ -20,13 +21,27 @@ namespace CommandLineTools.SourceControlTools.Git
 
         public string Raw { get; private set; }
 
-        private void ParseStatusLine()
+        protected void ParseStatusLine()
         {
-            //todo to implement
+            X = Raw[0];
+            Y = Raw[1];
         }
 
-        // todo : constructor
-        // todo : factory
+        protected bool IsStatusLineValid()
+        {
+            if (Raw.Length < 5) return false;
+            if (Raw[2] != ' ') return false;
+            return true;
+        }
+        protected GitStatusLine(){}
+
+        public GitStatusLine GetGitStatusLine(string pStatusLine)
+        {
+            var gsl = new GitStatusLine() {Raw = pStatusLine};
+            if (!gsl.IsStatusLineValid()) throw new GitException("Invalid status line: " + Raw);
+            gsl.ParseStatusLine();
+            return gsl;
+        }
   
     }
 }
