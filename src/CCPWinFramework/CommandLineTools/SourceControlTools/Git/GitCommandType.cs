@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CommandLineTools.SourceControlTools.Git
 {
-    class GitCommandType
+    public enum GitCommandType
     {
+        Status
     }
 }

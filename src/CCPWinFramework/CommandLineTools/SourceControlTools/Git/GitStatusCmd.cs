@@ -20,7 +20,8 @@ namespace CommandLineTools.SourceControlTools.Git
         }
         public override string GenerateCommandLineParameters()
         {
-            throw new NotImplementedException();
+            return "status --porcelain=1";
         }
+
     }
 }
