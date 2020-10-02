@@ -49,6 +49,7 @@
     <Compile Include="SourceControlTools\Git\GitCommandType.cs" />
     <Compile Include="SourceControlTools\Git\GitException.cs" />
     <Compile Include="SourceControlTools\Git\GitRunner.cs" />
+    <Compile Include="SourceControlTools\Git\GitStatusAnswer.cs" />
     <Compile Include="SourceControlTools\Git\GitStatusCmd.cs" />
     <Compile Include="SourceControlTools\Git\GitStatusLine.cs" />
     <Compile Include="SourceControlTools\Git\GitWorkspace.cs" />

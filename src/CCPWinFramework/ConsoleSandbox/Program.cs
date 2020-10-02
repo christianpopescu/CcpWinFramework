@@ -20,6 +20,7 @@ namespace ConsoleSandbox
             //TestSendMailMessage();
             Console.Write("Press Any Key! ");
             Console.ReadKey();
+
         }
 
         static void TestSendMailMessage()
@@ -41,7 +42,6 @@ namespace ConsoleSandbox
                 UseDefaultCredentials = false,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 Credentials = new System.Net.NetworkCredential("ccp.adm@outlook.com", "password"),
-                
             };
 
             try
