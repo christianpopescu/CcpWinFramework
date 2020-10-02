@@ -8,6 +8,10 @@ namespace CommandLineTools.SourceControlTools.Git
 {
     public class GitStatusAnswer
     {
+        protected List<GitStatusLine> Answer = new List<GitStatusLine>();
 
+        public int NumberOfLines => Answer.Count;
+
+        public bool IsEmptyAnswer => NumberOfLines == 0;
     }
 }

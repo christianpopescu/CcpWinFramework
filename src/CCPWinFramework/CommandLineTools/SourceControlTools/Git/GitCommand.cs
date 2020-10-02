@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CommandLineTools.SourceControlTools.Git
+﻿namespace CommandLineTools.SourceControlTools.Git
 {
     /// <summary>
     /// Represent a generic Git command
