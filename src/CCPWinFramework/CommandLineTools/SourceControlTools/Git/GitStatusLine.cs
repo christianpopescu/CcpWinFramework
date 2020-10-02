@@ -25,6 +25,7 @@ namespace CommandLineTools.SourceControlTools.Git
         {
             X = Raw[0];
             Y = Raw[1];
+            Path =Raw.Substring(3);
         }
 
         protected bool IsStatusLineValid()
@@ -35,10 +36,10 @@ namespace CommandLineTools.SourceControlTools.Git
         }
         protected GitStatusLine(){}
 
-        public GitStatusLine GetGitStatusLine(string pStatusLine)
+        public static GitStatusLine GetGitStatusLine(string pStatusLine)
         {
             var gsl = new GitStatusLine() {Raw = pStatusLine};
-            if (!gsl.IsStatusLineValid()) throw new GitException("Invalid status line: " + Raw);
+            if (!gsl.IsStatusLineValid()) throw new GitException("Invalid status line: " + gsl.Raw);
             gsl.ParseStatusLine();
             return gsl;
         }

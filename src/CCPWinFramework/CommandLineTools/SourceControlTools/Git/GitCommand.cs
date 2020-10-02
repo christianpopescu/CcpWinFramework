@@ -11,9 +11,11 @@
 
         public abstract  string GenerateCommandLineParameters();
 
-        public  string Execute(GitWorkspace pGitWorkspace)
+        protected abstract GitCommandAnswer Parse(string runnerAnswer);
+
+        public  GitCommandAnswer Execute(GitWorkspace pGitWorkspace)
         {
-            return Runner.DirectRunWithResult(pGitWorkspace, GenerateCommandLineParameters());
+            return Parse(Runner.DirectRunWithResult(pGitWorkspace, GenerateCommandLineParameters()));
         }
 
     }

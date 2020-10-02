@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CommandLineTools.SourceControlTools.Git
 {
-    public class GitStatusAnswer
+    public class GitStatusAnswer : GitCommandAnswer
     {
-        protected List<GitStatusLine> Answer = new List<GitStatusLine>();
+        public List<GitStatusLine> Answer = new List<GitStatusLine>();
 
         public int NumberOfLines => Answer.Count;
 

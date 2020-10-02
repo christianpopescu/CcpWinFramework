@@ -1,5 +1,6 @@
 ﻿
 
+using System.Text;
 using ProcessesAndThreads.CmdLine;
 using CommandLineTools.SourceControlTools.Git;
 
@@ -30,7 +31,12 @@ namespace ConsoleSandbox.ProcessesAndThreads
             // d:\Program Files\Git\cmd\git.exe
             GitStatusCmd gsc = GitStatusCmd.GetGitStatusCmd();
             GitWorkspace gw = GitWorkspace.GetGitWorkspace(@"E:\ccp_vhdd_main\workspace\CcpWinFramework");
-            return gsc.Execute(gw);
+            GitStatusAnswer gsa = (GitStatusAnswer) gsc.Execute(gw);
+            if (gsa.IsEmptyAnswer) return "is empty answer";
+            var sb = new StringBuilder();
+            foreach (var gsl in gsa.Answer)
+                sb.AppendLine(gsl.X + " " + gsl.Y + " path: " + gsl.Path);
+            return sb.ToString();
         }
         //public static string RunArchiverTool()
         //{

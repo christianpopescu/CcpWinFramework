@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,19 @@ namespace CommandLineTools.SourceControlTools.Git
         public override string GenerateCommandLineParameters()
         {
             return "status --porcelain=1";
+        }
+
+        protected override GitCommandAnswer Parse(string runnerAnswer)
+        {
+            var gsa = new GitStatusAnswer();
+            if (string.IsNullOrEmpty(runnerAnswer)) return gsa;
+            var sr = new StringReader(runnerAnswer);
+            string line ;
+            while (!string.IsNullOrEmpty(line = sr.ReadLine()) )
+            {
+                gsa.Answer.Add(GitStatusLine.GetGitStatusLine(line));
+            }
+            return gsa;
         }
 
         public static GitStatusCmd GetGitStatusCmd()
