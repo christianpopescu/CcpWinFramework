@@ -6,7 +6,8 @@
 
 namespace CommandLineTools.SourceControlTools.Git
 {
-    public class GitWorkspaceRepository
+    public abstract class GitWorkspaceRepository
     {
+
     }
 }

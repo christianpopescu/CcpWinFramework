@@ -55,6 +55,7 @@
     <Compile Include="SourceControlTools\Git\GitStatusCmd.cs" />
     <Compile Include="SourceControlTools\Git\GitStatusLine.cs" />
     <Compile Include="SourceControlTools\Git\GitWorkspace.cs" />
+    <Compile Include="SourceControlTools\Git\GitWorkspaceRepositoryXml.cs" />
     <Compile Include="SourceControlTools\Git\misc\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
