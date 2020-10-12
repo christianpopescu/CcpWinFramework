@@ -1,6 +1,4 @@
-﻿
-
-/// <summary>
+﻿/// <summary>
 ///  Repository that keeps informations about available workspaces
 /// </summary>
 
