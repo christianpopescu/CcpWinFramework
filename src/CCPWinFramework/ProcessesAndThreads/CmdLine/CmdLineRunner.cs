@@ -5,6 +5,7 @@ namespace ProcessesAndThreads.CmdLine
 {
     /// <summary>
     /// Windows CMD Line wrapper
+    /// It use a Windows Process to run the tool
     /// </summary>
     public class CmdLineRunner : IRunCmdUtil
     {

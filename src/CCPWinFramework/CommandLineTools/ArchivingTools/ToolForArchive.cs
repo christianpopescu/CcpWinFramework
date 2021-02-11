@@ -1,10 +1,12 @@
-﻿using ProcessesAndThreads.CmdLine;
+﻿using System;
+using ProcessesAndThreads.CmdLine;
 
 namespace CommandLineTools.ArchivingTools
 {
     /// <summary>
     /// Abstract class used to implement IoC pattern
     /// </summary>
+    [Obsolete("Class not realy used. First version of design")]
     public abstract class ToolForArchive : CommandLineTool
     {
         /// <summary>
