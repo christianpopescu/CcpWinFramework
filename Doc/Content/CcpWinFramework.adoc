@@ -1,6 +1,6 @@
 = CCPWinFramework
 Doc Writer <christian.popescu@outlook.com>
-v 1.0, 2020-10-05
+v 1.1, 2021-11-08
 :sectnums:
 :toc:
 :toclevels: 5
@@ -8,6 +8,8 @@ v 1.0, 2020-10-05
 = Introduction
 
 Document CcpWinFramework Project
+
+Create new version dot net core
 
 == ProcessesAndThreads
 Command line runner
